@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E9AF612-3912-4AFE-81F1-C229AA4CE6FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MPosInfoManagementSystem</RootNamespace>
+    <AssemblyName>MPosInfoManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\ATMSystem(Practice)\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\ATMSystem(Practice)\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\ATMSystem(Practice)\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ActivityLogBank.cs" />
+    <Compile Include="Forms\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ConnectionString.cs" />
+    <Compile Include="Forms\FormContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormContainer.Designer.cs">
+      <DependentUpon>FormContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmActivityLogging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmActivityLogging.Designer.cs">
+      <DependentUpon>FrmActivityLogging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddNewDetainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddNewDetainee.Designer.cs">
+      <DependentUpon>FrmAddNewDetainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddIncidentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddIncidentRecord.Designer.cs">
+      <DependentUpon>FrmAddIncidentRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonnel.Designer.cs">
+      <DependentUpon>FrmAddPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBlotterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBlotterReport.Designer.cs">
+      <DependentUpon>FrmBlotterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetaineeAddMugshots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetaineeAddMugshots.Designer.cs">
+      <DependentUpon>FrmDetaineeAddMugshots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageDetainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageDetainee.Designer.cs">
+      <DependentUpon>FrmManageDetainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManagePersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManagePersonnel.Designer.cs">
+      <DependentUpon>FrmManagePersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSearchRecordNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSearchRecordNo.Designer.cs">
+      <DependentUpon>FrmSearchRecordNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageIncidentRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageIncidentRecords.Designer.cs">
+      <DependentUpon>FrmManageIncidentRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewIncidentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewIncidentRecord.Designer.cs">
+      <DependentUpon>FrmViewIncidentRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\InsertUpdateFunctions.cs" />
+    <Compile Include="Forms\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReleasedDetainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReleasedDetainee.Designer.cs">
+      <DependentUpon>FrmReleasedDetainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewMugShots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewMugShots.Designer.cs">
+      <DependentUpon>FrmViewMugShots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrintBlotter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintBlotter.Designer.cs">
+      <DependentUpon>PrintBlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStatisticalReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStatisticalReports.Designer.cs">
+      <DependentUpon>FrmStatisticalReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFingerPrints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFingerPrints.Designer.cs">
+      <DependentUpon>FrmFingerPrints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MPosDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MPosDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MPosDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MPosDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\SelectDeleteFunctions.cs" />
+    <Compile Include="Forms\ViewMugShots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewMugShots.Designer.cs">
+      <DependentUpon>ViewMugShots.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormContainer.resx">
+      <DependentUpon>FormContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmActivityLogging.resx">
+      <DependentUpon>FrmActivityLogging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddNewDetainee.resx">
+      <DependentUpon>FrmAddNewDetainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddIncidentRecord.resx">
+      <DependentUpon>FrmAddIncidentRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddPersonnel.resx">
+      <DependentUpon>FrmAddPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBlotterReport.resx">
+      <DependentUpon>FrmBlotterReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetaineeAddMugshots.resx">
+      <DependentUpon>FrmDetaineeAddMugshots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageDetainee.resx">
+      <DependentUpon>FrmManageDetainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManagePersonnel.resx">
+      <DependentUpon>FrmManagePersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSearchRecordNo.resx">
+      <DependentUpon>FrmSearchRecordNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageIncidentRecords.resx">
+      <DependentUpon>FrmManageIncidentRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewIncidentRecord.resx">
+      <DependentUpon>FrmViewIncidentRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReleasedDetainee.resx">
+      <DependentUpon>FrmReleasedDetainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewMugShots.resx">
+      <DependentUpon>FrmViewMugShots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportBlotter.rdlc" />
+    <EmbeddedResource Include="Forms\PrintBlotter.resx">
+      <DependentUpon>PrintBlotter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStatisticalReports.resx">
+      <DependentUpon>FrmStatisticalReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFingerPrints.resx">
+      <DependentUpon>FrmFingerPrints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="IRCReceipt.rdlc" />
+    <EmbeddedResource Include="Forms\ViewMugShots.resx">
+      <DependentUpon>ViewMugShots.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="MPosDBDataSet.xsc">
+      <DependentUpon>MPosDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MPosDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MPosDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MPosDBDataSet.xss">
+      <DependentUpon>MPosDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MPosDBDataSet2.xsc">
+      <DependentUpon>MPosDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MPosDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MPosDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MPosDBDataSet2.xss">
+      <DependentUpon>MPosDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policeman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d3-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policemen-salute-9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add44 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\police19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard105 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policeman1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LEAD PNP_1440x900.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

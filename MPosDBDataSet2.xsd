@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MPosDBDataSet2" targetNamespace="http://tempuri.org/MPosDBDataSet2.xsd" xmlns:mstns="http://tempuri.org/MPosDBDataSet2.xsd" xmlns="http://tempuri.org/MPosDBDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MPosDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MPosDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MPosInfoManagementSystem.Properties.Settings.GlobalReference.Default.MPosDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_2TableAdapter" GeneratorDataComponentClassName="View_2TableAdapter" Name="View_2" UserDataComponentName="View_2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MPosDBConnectionString (Settings)" DbObjectName="MPosDB.dbo.View_2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Filed Reports], Total FROM dbo.View_2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Filed Reports" DataSetColumn="Filed Reports" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MPosDBDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MPosDBDataSet2" msprop:Generator_UserDSName="MPosDBDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_2" msprop:Generator_TableClassName="View_2DataTable" msprop:Generator_TableVarName="tableView_2" msprop:Generator_TablePropName="View_2" msprop:Generator_RowDeletingName="View_2RowDeleting" msprop:Generator_RowChangingName="View_2RowChanging" msprop:Generator_RowEvHandlerName="View_2RowChangeEventHandler" msprop:Generator_RowDeletedName="View_2RowDeleted" msprop:Generator_UserTableName="View_2" msprop:Generator_RowChangedName="View_2RowChanged" msprop:Generator_RowEvArgName="View_2RowChangeEvent" msprop:Generator_RowClassName="View_2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Filed_x0020_Reports" msprop:Generator_ColumnVarNameInTable="columnFiled_Reports" msprop:Generator_ColumnPropNameInRow="Filed_Reports" msprop:Generator_ColumnPropNameInTable="Filed_ReportsColumn" msprop:Generator_UserColumnName="Filed Reports" type="xs:dateTime" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
